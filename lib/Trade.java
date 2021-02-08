@@ -10,14 +10,12 @@ public class Trade {
         this.quantity =  quantity;
     }
     
-    public  Trade(String id, String symbol, int quantity, double price ) {
+    public Trade(String id, String symbol, int quantity, double price ) {
         this.id = id;
         this.symbol = symbol;
         this.quantity =  quantity;
         this.price = price;
-    }
-
-   
+    } 
 
     public void setPrice(double price) {
         if (price > 0) {
