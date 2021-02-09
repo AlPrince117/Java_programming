@@ -1,27 +1,22 @@
-public class Trade {
+import java.time.LocalTime;  
+import java.time.LocalDate; 
+
+public abstract class Trade {
     protected String id;
     protected String symbol;
     protected int quantity;
     protected double price;
-
-    public Trade(String id, String symbol, int quantity) {
-        this.id = id;
-        this.symbol = symbol;
-        this.quantity =  quantity;
-    }
+    protected LocalDate date;
+    protected LocalTime time;
     
-    public Trade(String id, String symbol, int quantity, double price ) {
-        this.id = id;
-        this.symbol = symbol;
-        this.quantity =  quantity;
-        this.price = price;
-    } 
 
-    public void setPrice(double price) {
-        if (price > 0) {
-            this.price = price;
-        } 
-    }
+    // public void setPrice(double price) {
+    //     if (price > 0) {
+    //         this.price = price;
+    //     } 
+    // }
+
+    public abstract double calcDividend(); 
 
     @Override
     public String toString() {
